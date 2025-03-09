@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  :root {
+    --primary: #3498db;
+    --secondary: #2c3e50;
+    --accent: #e74c3c;
+    --light: #ecf0f1;
+    --dark: #34495e;
+    --success: #2ecc71;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .btn-danger {
+    background-color: var(--accent);
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+  }
+  
+  .btn-success {
+    background-color: var(--success);
+  }
+  
+  .btn-success:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--secondary);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo a {
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+  
+  /* Main Content */
+  main {
+    padding: 40px 0;
+  }
+  
+  .page-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--dark);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  /* Event Cards */
+  .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .event-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event-image {
+    height: 180px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .event-details {
+    padding: 20px;
+  }
+  
+  .event-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--dark);
+  }
+  
+  .event-date, .event-location {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .event-price {
+    font-weight: bold;
+    margin: 10px 0;
+    color: var(--accent);
+  }
+  
+  .event-description {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Event Details Page */
+  .event-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .event-detail-image {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+  
+  .event-detail-info {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .event-detail-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--dark);
+  }
+  
+  .event-detail-meta {
+    margin-bottom: 20px;
+  }
+  
+  .event-detail-meta p {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .event-detail-description {
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .registration-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--dark);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  /* My Registrations */
+  .registrations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .registrations-table th,
+  .registrations-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .registrations-table th {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 500;
+  }
+  
+  .registrations-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .registrations-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .status-label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .status-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--secondary);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    list-style: none;
+    margin: 20px 0;
+  }
+  
+  .footer-links li {
+    margin: 0 15px;
+  }
+  
+  .footer-links a {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary);
+  }
+  
+  .copyright {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    .event-detail-container {
+      flex-direction: column;
+    }
+    
+    .event-detail-image {
+      height: 200px;
+    }
+    
+    .registrations-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
