@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Event.css">
+</head>
+<body>
+    <!-- Header starts -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><a href="#home">EventHub</a></div>
+        <ul class="nav-links">
+          <li><a href="reg.html">Home</a></li>
+          <li><a href="Event.html">Events</a></li>
+          <li><a href="my-registration.html">My Registrations</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Header ends -->
+
+  <!--main section-->
+    <main>
+        <!-- Event List Section -->
+        <section id="event-list-section">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="event-list">
+                    <!-- Event cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section (initially hidden) -->
+        <section id="event-details-section" style="display: none;">
+            <div class="container">
+                <button class="btn btn-secondary" id="back-to-events">Back to Events</button>
+                <div class="event-details-container">
+                    <div class="event-details-header">
+                        <img src="" alt="Event" class="event-details-image" id="event-detail-img">
+                        <div class="event-details-overlay">
+                            <h1 id="event-detail-title"></h1>
+                            <p id="event-detail-short-desc"></p>
+                        </div>
+                    </div>
+                    <div class="event-details-content">
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i>📅</i>
+                                <span id="event-detail-date"></span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i>🕒</i>
+                                <span id="event-detail-time"></span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i>📍</i>
+                                <span id="event-detail-location"></span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i>👥</i>
+                                <span id="event-detail-capacity"></span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i>💰</i>
+                                <span id="event-detail-price"></span>
+                            </div>
+                        </div>
+
+                        <div class="event-tabs">
+                            <div class="event-tab active" data-tab="description">Description</div>
+                            <div class="event-tab" data-tab="agenda">Agenda</div>
+                            <div class="event-tab" data-tab="speakers">Speakers</div>
+                            <div class="event-tab" data-tab="location">Location</div>
+                            <div class="event-tab" data-tab="tickets">Tickets</div>
+
+                            <script src="Event.js"></script>
+</body>
+</html>
